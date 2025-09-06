@@ -90,3 +90,6 @@ Dataset/
 │   └── top/       # Top view sketches
 └── 3dmodel/       # 3D meshes (.obj files)
 ```
+
+## Writeup
+The final writeup for the project which includes even more details can be found [here](/img/3t3d_writeup.pdf).
