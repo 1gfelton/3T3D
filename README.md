@@ -26,7 +26,7 @@ We call this step in the process 'Fusion' since we're sort of fusing everything 
 This is where we had to do the most engineering ~ we opted to use a custom transformer structure that consists of 6 decoder layers, each with 8 attention heads performing self-attention. This provided us with enough of a balance between total runtime, model size, and output quality.
 
 ### Upsampling
-We continuously upscale the decoded output from $$\mathbb{R}^{16} \rightarrow \mathbb{R}^{128}$$
+We continuously upscale the decoded output from ![equation](https://latex.codecogs.com/svg.image?\mathbb{R}^{16}\rightarrow\mathbb{R}^{128})
 
 ## Training
 Our objective is to minimize the L1 loss between the predicted triplane output features for the given object and the ground truth triplane features. We also adopted a bit of an interesting training strategy in order to get the most out of DINOv2. 
