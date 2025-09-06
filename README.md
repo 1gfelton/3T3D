@@ -24,7 +24,6 @@ We start off by feeding the 3 input views into the DINOv2 Encoder to extract the
 <div align="center">
     <img src="https://github.com/1gfelton/3T3D/blob/main/img/fusion_diagram.jpg" width="500">
 </div>
-![How fusion works](/img/fusion_diagram.jpg)
 
 We call this step in the process 'Fusion' since we're sort of fusing everything together. The idea is that each patch embedding produced by the vision transformer will correspond to the same space in 3D, therefore we can sum them all together into a single embedding vector. This single vector will then get passed to the decoder to be turned into the output triplanes.
 
