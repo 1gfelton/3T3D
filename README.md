@@ -8,8 +8,6 @@ We had a relatively simple vision: If given 3 orthographic napkin sketches as in
 It turns out, this is possible! SOTA Vision Transformer architectures allow for a rich and positionally grounded 2D image to provide information for something spatial, like a 3D model. As a base model, we turned to [DINOv2](https://arxiv.org/abs/2304.07193) for its multi-view embeddings. Essentially we're able to break the input images into 'patches' and then use the patches as tokens to feed to our encoder (DINOv2), combine the resulting embeddings, then decode them using a custom transformer architecture.
 
 ## Architecture Overview
-> [!CAUTION]
-> replace the list with a diagram of the architecture
 ![Diagram of the model architecture](/img/arch_diagram.jpg)
 
 Our inputs are the three orthographics sketches representing top, side, and front views of the building (just like floorplan and elevation). We wanted the designer to have full control of the final 3D form, which is why we chose to have this many inputs. There are essentially four stages of this architecture:
