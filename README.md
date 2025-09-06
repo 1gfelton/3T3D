@@ -38,7 +38,7 @@ We continuously upscale the decoded output from ![equation](https://latex.codeco
 ### Custom Dataset
 ![How we created the dataset for our trainign](/img/dataset_creation1.jpg)
 
-During our literature review, we were unable to find a dataset that was 'good enough' for our intent of producing designs of a quality suitable for architectural design. We needed something new, ultimately opting for a custom pipeline that allowed us to produce thousands of images of architectural renderings that we would then use to generate thousands of 3D models using TripoSR. Once the 3D models were generated, for each model we generate views of the model from the top, front, and side, and convert these to sketchy images using [Informative Drawings](https://github.com/carolineec/informative-drawings).
+During our literature review, we were unable to find a dataset that was 'good enough' for our intent of producing designs of a quality suitable for architectural design. We needed something new, ultimately opting for a custom pipeline that allowed us to produce thousands of images of architectural renderings that we would then use to generate thousands of 3D models using [TripoSR](https://github.com/VAST-AI-Research/TripoSR). Once the 3D models were generated, for each model we generate views of the model from the top, front, and side, and convert these to sketchy images using [Informative Drawings](https://github.com/carolineec/informative-drawings).
 
 ### Training Objective
 Our objective is to minimize the L1 loss between the predicted triplane output features for the given object and the ground truth triplane features. We also adopted a bit of an interesting training strategy in order to get the most out of DINOv2. 
