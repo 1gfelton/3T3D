@@ -31,7 +31,7 @@ We call this step in the process 'Fusion' since we're sort of fusing everything 
 ### Decoder
 <!-- ![Diagram of the decoder architecture](/img/decoder_diagram.jpg)-->
 <div align="center">
-    <img src="https://github.com/1gfelton/3T3D/blob/main/img/decoder_diagram.jpg" width="100">
+    <img src="https://github.com/1gfelton/3T3D/blob/main/img/decoder_diagram.jpg" width="200">
 </div>
 
 This is where we had to do the most engineering ~ we opted to use a custom transformer structure that consists of 6 decoder layers, each with 8 attention heads performing self-attention. This provided us with enough of a balance between total runtime, model size, and output quality.
