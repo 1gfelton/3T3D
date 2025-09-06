@@ -54,7 +54,7 @@ We trained on an A100 for 5 hours, giving us 37 total epochs. It was `480s` per 
 Here's an example output from our model:
 
 <div align="center">
-    <img src="https://github.com/1gfelton/3T3D/blob/main/img/comparison.jpg" width="1500">
+    <img src="https://github.com/1gfelton/3T3D/blob/main/img/comparison.jpg" width="1000">
 </div>
 
 # Running our Code
