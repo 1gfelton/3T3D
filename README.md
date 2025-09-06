@@ -29,12 +29,10 @@ We start off by feeding the 3 input views into the DINOv2 Encoder to extract the
 We call this step in the process 'Fusion' since we're sort of fusing everything together. The idea is that each patch embedding produced by the vision transformer will correspond to the same space in 3D, therefore we can sum them all together into a single embedding vector. This single vector will then get passed to the decoder to be turned into the output triplanes.
 
 ### Decoder
-<!-- ![Diagram of the decoder architecture](/img/decoder_diagram.jpg)-->
+This is where we had to do the most engineering ~ we opted to use a custom transformer structure that consists of 6 decoder layers, each with 8 attention heads performing self-attention. This provided us with enough of a balance between total runtime, model size, and output quality.
 <div align="center">
     <img src="https://github.com/1gfelton/3T3D/blob/main/img/decoder_diagram.jpg" width="200">
 </div>
-
-This is where we had to do the most engineering ~ we opted to use a custom transformer structure that consists of 6 decoder layers, each with 8 attention heads performing self-attention. This provided us with enough of a balance between total runtime, model size, and output quality.
 
 ### Upsampling
 We continuously upscale the decoded output from ![equation](https://latex.codecogs.com/svg.image?\mathbb{R}^{16}\rightarrow\mathbb{R}^{128})
