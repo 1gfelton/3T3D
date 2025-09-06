@@ -17,7 +17,7 @@ Our inputs are the three orthographics sketches representing top, side, and fron
     4. Progressive Upsampling to Output
 
 ### Input 
-We start off by feeding the 3 input views into the DINOv2 Encoder to extract the patch embeddings. DINOv2 includes a classification `cls` token in its embeddings however we remove this as we don't have any classes in our training data. DINO produces vectors of size `[B, H, W]` however we will rescale this to a standard image size of `512x512`. Once this is done we are ready to move to the next step.
+We start off by feeding the 3 input views into the DINOv2 Encoder to extract the patch embeddings. DINOv2 includes a classification `cls` token in its embeddings however we remove this as we don't have any classes in our training data. DINO produces vectors of size `[B, H, W]` however we will resize these to `[B, C, H, W]`and rescale them from `256x256` to `512x512`. Once this is done we are ready to move to the next step.
 
 ### Fusion
 We call this step in the process 'Fusion' since we're sort of fusing everything together. The idea is that each patch embedding produced by the vision transformer will correspond to the same space in 3D, therefore we can sum them all together into a single embedding vector. This single vector will then get passed to the decoder to be turned into the output triplanes.
