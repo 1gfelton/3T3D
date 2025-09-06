@@ -51,6 +51,12 @@ Here we show the validation/training loss from our final training run. As shown,
 
 We trained on an A100 for 5 hours, giving us 37 total epochs. It was `480s` per epoch on average.
 
+Here's an example output from our model:
+
+<div align="center">
+    <img src="https://github.com/1gfelton/3T3D/blob/main/img/decoder_diagram.jpg" width="2000">
+</div>
+
 # Running our Code
 ## Setup
 We recommend running our notebook in google colab, as we had done much of our experimentation this way.
