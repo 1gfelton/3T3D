@@ -12,11 +12,11 @@ It turns out, this is possible! SOTA Vision Transformer architectures allow for 
 > Add architecture diagrams here
 
 Our inputs are the three orthographics sketches representing top, side, and front views of the building (just like floorplan and elevation). We wanted the designer to have full control of the final 3D form, which is why we chose to have this many inputs. There are essentially four stages of this architecture:
-    1. Input Processing
-    2. Encoder (DINOv2) - Extract Patches
-    2. Multi-view Fusion (Combine Patches)
-    3. Decoder (Custom Transformer)
-    4. Progressive Upsampling to Output
+1. Input Processing
+2. Encoder (DINOv2) - Extract Patches
+2. Multi-view Fusion (Combine Patches)
+3. Decoder (Custom Transformer)
+4. Progressive Upsampling to Output
 
 ### Input 
 > [!CAUTION]
