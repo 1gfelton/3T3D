@@ -1461,7 +1461,7 @@ import time
 from torch.utils.data import random_split
 # --- MODIFIED Main Function ---
 def main():
-    wandb.login(key="e516f9f195359237d447f73e9cdd12ca42485966")
+    wandb.login(key="")
     wandb_config = {
     "encoder_model_name": ENC_MODEL_NAME,
     "decoder_dim": DEC_DIM,
