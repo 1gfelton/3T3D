@@ -48,4 +48,5 @@ This consisted of a two stage training process whereby we begin by first freezin
 ### Results
 Here we show the validation/training loss from our final training run. As shown, the model is able to slowly learn the triplane representations, albeit quite slowly. We trained for 37 epochs but believe that with greater optimization when it comes to lr scheduler and hyperparameters, we could beat our previous score and produce even better outputs. 
 ![Wandb training results](/img/val_train_loss.png)
+
 We trained on an A100 for 5 hours, giving us 37 total epochs. It was `480s` per epoch on average.
