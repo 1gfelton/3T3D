@@ -44,8 +44,8 @@ During our literature review, we were unable to find a dataset that was 'good en
 
 Here are some examples from the dataset:
 <div align="center">
-    <img src="https://github.com/1gfelton/3T3D/blob/main/img/data_sketch.jpg" width="750">
-    <img src="https://github.com/1gfelton/3T3D/blob/main/img/data_3d.jpg" width="750">
+    <img src="https://github.com/1gfelton/3T3D/blob/main/img/data_sketch.png" width="750">
+    <img src="https://github.com/1gfelton/3T3D/blob/main/img/data_3d.png" width="750">
 </div>
 
 ### Training Objective
