@@ -1,4 +1,5 @@
 *.3dm
 *.pdf
 *.3dmbak
+*.obj
 data/
