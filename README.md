@@ -18,9 +18,6 @@ Our inputs are the three orthographics sketches representing top, side, and fron
 4. Progressive Upsampling to Output
 
 ### Input 
-> [!CAUTION]
-> Add diagrams here
-
 We start off by feeding the 3 input views into the DINOv2 Encoder to extract the patch embeddings. DINOv2 includes a classification `cls` token in its embeddings however we remove this as we don't have any classes in our training data. DINO produces vectors of size `[B, H, W]` however we will concatenate our three views into tensors of shape `[B, C, H, W]`and rescale them from `256x256` to `512x512`. Once this is done we are ready to move to the next step.
 
 ### Fusion
