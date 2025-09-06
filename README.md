@@ -29,6 +29,10 @@ This is where we had to do the most engineering ~ we opted to use a custom trans
 We continuously upscale the decoded output from ![equation](https://latex.codecogs.com/svg.image?\mathbb{R}^{16}\rightarrow\mathbb{R}^{128})
 
 ## Training
+### Custom Dataset
+During our literature review, we were unable to find a dataset that was 'good enough' for our intent of producing designs of a quality suitable for architectural design. We needed something new, ultimately opting for a custom pipeline that allowed us to produce thousands of images of architectural renderings that we would then use to generate thousands of 3D models using TripoSR. Once the 3D models were generated, for each model we generate views of the model from the top, front, and side, and convert these to sketchy images using [Informative Drawings](https://github.com/carolineec/informative-drawings)
+
+### Training Objective
 Our objective is to minimize the L1 loss between the predicted triplane output features for the given object and the ground truth triplane features. We also adopted a bit of an interesting training strategy in order to get the most out of DINOv2. 
 
 This consisted of a two stage training process whereby we begin by first freezing the encoder, and training the decoder only. Once we achieve good predictions from the decoder, we then set about unfreezing the entire model and fine-tuning with differentiated learning rates.  
