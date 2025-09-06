@@ -50,3 +50,29 @@ Here we show the validation/training loss from our final training run. As shown,
 ![Wandb training results](/img/val_train_loss.png)
 
 We trained on an A100 for 5 hours, giving us 37 total epochs. It was `480s` per epoch on average.
+
+# Running our Code
+## Setup
+We recommend running our notebook in google colab, as we had done much of our experimentation this way.
+You will need to update the following directories to point to the location of your dataset:
+
+```
+TRAIN_IMAGE_DIR_V1 = "/your/path/to/sketch/front"
+TRAIN_IMAGE_DIR_V2 = "/your/path/to/sketch/right" 
+TRAIN_IMAGE_DIR_V3 = "/your/path/to/sketch/top"
+TRAIN_MESH_DIR = "/your/path/to/3dmodel"
+
+TEST_IMAGE_PATH_V1 = "/your/path/to/sketch/front/test_image.png"
+```
+
+## Data
+Download our dataset from [here](https://drive.google.com/drive/folders/1jQuu2hA1_R0IRaaHouJ5B9rVDO61THqD?usp=drive_link).
+
+```
+Dataset/
+├── sketch/
+│   ├── front/     # Front view sketches (.png, .jpg)
+│   ├── right/     # Right view sketches  
+│   └── top/       # Top view sketches
+└── 3dmodel/       # 3D meshes (.obj files)
+```
