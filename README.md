@@ -93,3 +93,4 @@ Dataset/
 
 ## Writeup
 The final writeup for the project which includes even more details can be found [here](/img/3t3d_writeup.pdf).
+Check out our final presentation (here.)[https://www.youtube.com/watch?v=DEXX0CsDG4U]
